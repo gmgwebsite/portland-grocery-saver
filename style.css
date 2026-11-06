@@ -1,0 +1,54 @@
+:root{--bg:#fbfaf6;--card:#fff;--ink:#1d2a22;--muted:#5d6b62;--line:#e4e2d9;--accent:#2f7a4a;--accent2:#e8f3ec;--price:#b4321f;
+--fm:#0b5ea8;--sw:#c8102e;--ns:#2f7a4a;--wc:#7a4b14;--go:#6a2c91}
+@media (prefers-color-scheme:dark){:root{--bg:#141815;--card:#1c221e;--ink:#e9eee9;--muted:#a3b0a7;--line:#2c352f;--accent:#5fbf82;--accent2:#1f3027;--price:#ff7b63;
+--fm:#5ca8ec;--sw:#ff6b7f;--ns:#5fbf82;--wc:#d9a15c;--go:#b98ad9}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header.site{border-bottom:1px solid var(--line);background:var(--card)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink)}
+nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+nav a:first-child{margin-left:0}
+main.wrap{padding:28px 16px 48px}
+h1{font-size:2.1rem;line-height:1.2;margin:.2em 0 .4em;letter-spacing:-.01em}
+h2{font-size:1.4rem;margin:2em 0 .6em}
+h3{font-size:1.05rem;margin:1.4em 0 .5em}
+.kicker{text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:700;color:var(--accent);margin:0}
+.dek{font-size:1.15rem;color:var(--muted)}
+.hero{background:var(--accent2);border-radius:16px;padding:28px}
+.hero h1{margin-top:.2em}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:700;margin-top:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.price{font-weight:800;color:var(--price);font-size:1.2rem;font-variant-numeric:tabular-nums}
+.store{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:999px;color:#fff;background:var(--muted);white-space:nowrap;align-self:flex-start}
+.s-fred-meyer{background:var(--fm)}.s-safeway{background:var(--sw)}.s-new-seasons{background:var(--ns)}.s-winco{background:var(--wc)}.s-grocery-outlet{background:var(--go)}
+@media (prefers-color-scheme:dark){.store{color:#111}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:680px){.two{grid-template-columns:1fr}h1{font-size:1.7rem}}
+.post-link{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:var(--ink);margin-bottom:12px}
+.post-link span{display:block;color:var(--muted);font-size:.95rem;margin-top:4px}
+.post-link small{color:var(--muted)}
+.stores{list-style:none;padding:0;margin:0}.stores li{padding:6px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.top-deals{list-style:none;counter-reset:n;padding:0}
+.top-deals li{counter-increment:n;display:grid;grid-template-columns:2.2em 7.5em 1fr auto;gap:4px 10px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
+.top-deals li::before{content:counter(n);font-weight:800;color:var(--muted)}
+.top-deals .note{grid-column:3/5;font-size:.85rem;color:var(--muted)}
+@media (max-width:600px){.top-deals li{grid-template-columns:2em 1fr}.top-deals .what,.top-deals .store,.top-deals .note{grid-column:2}}
+.cmp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.cmp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cmp h3{margin:0 0 6px;font-size:.98rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+tr.win td{font-weight:700;color:var(--accent)}
+.nowrap{white-space:nowrap;font-variant-numeric:tabular-nums}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+.filters button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sources{font-size:.9rem;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:20px 0}
+table.deals{table-layout:fixed}table.deals th:nth-child(2),table.deals td:nth-child(2){width:9em}table.deals th:nth-child(3),table.deals td:nth-child(3){width:8.5em}
+@media (max-width:600px){table.deals th:nth-child(2),table.deals td:nth-child(2){width:6.5em}table.deals th:nth-child(3),table.deals td:nth-child(3){width:7em}}
